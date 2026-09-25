@@ -10,7 +10,7 @@
 - Hai ô nằm gọn trong vùng an toàn (x 60–950, y 150–1500), không bị caption hay cột icon che.
 
 ## Nhịp giữ người xem
-Thứ tự được sắp theo 4 nguyên tắc:
+Thứ tự được sắp theo 5 nguyên tắc:
 1. **Mở bằng chuyển động mạnh nhất.** Khoảnh khắc nhân vật giáng xuống (Come@1) làm người xem dừng lướt.
 2. **Không có 2 cảnh liền nhau cùng kiểu góc.** Ô phóng to lần lượt: nhìn từ dưới lên → tay → từ trên xuống → lưng chéo → mặt nghiêng → nửa người từ trên → mắt cận.
    Mỗi slide mới là một cách nhìn mới, người xem không đoán được slide sau.

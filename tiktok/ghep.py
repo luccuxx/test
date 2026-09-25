@@ -24,8 +24,9 @@ def fit(path, w, h, zoom=1.0, tam=(0.5, 0.5)):
     im = Image.open(path).convert("RGB")
     a = np.asarray(im).max(2)
     rows, cols = np.where(a.max(1) > 6)[0], np.where(a.max(0) > 6)[0]
-    cut = max(rows[0], a.shape[0] - 1 - rows[-1]), max(cols[0], a.shape[1] - 1 - cols[-1])   # vien den, cat doi xung
-    im = im.crop((cut[1], cut[0], im.width - cut[1], im.height - cut[0]))
+    if len(rows) and len(cols):   # anh den hoan toan (camera ngoai vung troi): giu nguyen, khong cat vien
+        cut = max(rows[0], a.shape[0] - 1 - rows[-1]), max(cols[0], a.shape[1] - 1 - cols[-1])   # vien den, cat doi xung
+        im = im.crop((cut[1], cut[0], im.width - cut[1], im.height - cut[0]))
     if im.width / im.height > w / h:
         nw = round(im.height * w / h); x = (im.width - nw) // 2; im = im.crop((x, 0, x + nw, im.height))
     else:

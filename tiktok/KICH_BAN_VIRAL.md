@@ -66,3 +66,12 @@ powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/
 - Ảnh ra: `tiktok/anh_viral/viral_01.png` … `viral_20.png` (1080×1920).
 - Ô phóng to lệch hoặc xấu: chỉnh dòng `V<n>Z` trong `spec_viral.txt` (az/el/dist/dy như `spec25.txt`) rồi chạy lại.
 - Các ô camera game (`V01T`, `V02T`, `V07T`, `V08T`, `V10T`) muốn đổi khoảnh khắc thì chỉ cần đổi giây (cột 3), nhớ đổi giây ở dòng `Z` cùng cảnh cho khớp.
+
+## Sửa góc bị tay, vĩ hoặc đàn che
+1. Tạo 5 biến thể cho mỗi góc: `py -3.14 tao_do.py` → `spec_do.txt` (100 dòng).
+   - Góc bám xương: a = gốc, b = xoay trái 25°, c = xoay phải 25°, d = nâng camera 20°, e = chờ thêm 0,5 giây.
+   - Góc camera game: a = gốc, b = sớm 0,5 giây, c/d/e = muộn 0,5 / 1 / 1,5 giây.
+2. Render nhanh ở đúng khung ô 9:8: `powershell -File do_goc.ps1 -Cot 5 -Khung 98 -Nhanh`
+   → `_do/to_do_1.jpg` … `to_do_4.jpg`. Mỗi hàng là một góc (theo thứ tự V01T, V01Z, V02T…), 5 cột là a–e, mỗi ô có trái 001, phải 002.
+3. Chọn biến thể không bị che: `py -3.14 chon.py V04Z=c V07Z=b ...` (ghi thẳng vào `spec_viral.txt`; góc nào ổn thì không cần ghi).
+4. Render lại bài viral như mục Render ở trên.

@@ -1,0 +1,3 @@
+B11|Idleshow|0|Bip001 L Calf|25|-5|1.4|32|-0.05
+B12|Idleshow|0|Bip001 L Thigh|-40|0|1.6|30|-0.45
+C24|Idleshow|0|Bip001 Head|0|8|0.85|28|0

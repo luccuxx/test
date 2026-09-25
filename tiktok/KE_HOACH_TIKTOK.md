@@ -111,6 +111,9 @@ Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Gó
 ## 7. Quy trình
 - Tắt máy ảo (thiếu RAM làm batchmode lỗi "Failed to load Mono"), đóng Unity Editor.
 - Sửa góc trong `spec25.txt` (giữ kịch bản, chỉ chỉnh số), chạy `powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1`.
+- Chỉ render lại vài góc: chép các dòng đó vào `spec_sua.txt` (số phải giống hệt `spec25.txt`), chạy
+  `powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_sua.txt`
+  (cần `_render/` của lần render đủ 25 góc; ảnh cùng tên bị ghi đè rồi ghép lại cả 25 slide).
 - Soát `anh/`: không nền đen, chủ thể trong vùng an toàn, đúng giới hạn nội dung mục 1, hai skin cùng khung, vật thể nền
   không che nhân vật. Ảnh lệch thì chỉnh az/el/dist/dy hoặc thay bằng góc dự phòng rồi chạy lại.
 - Xóa `_render/` sau khi duyệt (chỉ giữ `anh/`). Bạn tự đăng; tôi không đăng hộ.

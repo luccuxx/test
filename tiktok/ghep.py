@@ -28,6 +28,10 @@ def fit(path, w, h):
 def main():
     os.makedirs(OUT, exist_ok=True)
     codes = [l.split("|")[0] for l in open(os.path.join(GOC, "spec25.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")]
+    thieu = [f"{sk}_{sz}/{c}.png" for c in codes for sk in ("001", "002") for sz in ("98", "916") if not os.path.exists(f"{R}/{sk}_{sz}/{c}.png")]
+    if thieu:
+        print("thieu anh trong _render (render du 25 goc truoc):", thieu)
+        return 1
     den = []
     for i, c in enumerate(codes, 1):
         g = Image.new("RGB", (1080, 1920))

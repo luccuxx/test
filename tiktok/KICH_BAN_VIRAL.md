@@ -11,30 +11,28 @@
 
 ## Nhịp giữ người xem
 Thứ tự được sắp theo 4 nguyên tắc:
-1. **Mở bằng ảnh đẹp nhất.** Cảnh kéo vĩ với hạt vàng (A06) là ảnh gây dừng lướt mạnh nhất.
-2. **Xen kẽ sáng và tối.** Đêm → trời → trời → trời → đêm → trời → trời. Mỗi lần đổi nền là một "cú giật mắt" giữ sự chú ý.
-3. **Tăng dần độ gần.** Toàn thân → gót → lưng → gáy → tay → mặt → **mắt**. Cảnh cuối cận nhất, là phần thưởng cho người lướt hết.
-4. **Chừa một "bí mật".** Lưng trần (cảnh 4) đặt ở giữa bài: người xem đoán được sẽ còn góc bất ngờ nên không thoát ra.
+1. **Mở bằng chuyển động mạnh nhất.** Khoảnh khắc nhân vật giáng xuống (Come@1) làm người xem dừng lướt.
+2. **Không có 2 cảnh liền nhau cùng kiểu góc.** Ô phóng to lần lượt: nhìn từ dưới lên → tay → từ trên xuống → lưng chéo → mặt nghiêng → nửa người từ trên → mắt cận.
+   Mỗi slide mới là một cách nhìn mới, người xem không đoán được slide sau.
+3. **Theo đúng dòng thời gian của đoạn Come:** giáng xuống → hạt vàng → cello đêm → ruy băng → bước vào sảnh.
+   Người xem cảm giác đang xem một câu chuyện và muốn biết đoạn kết.
+4. **Chèn cảnh bất ngờ ở giữa bài:** góc cao nhìn xuống (cảnh 3) và quay lưng (cảnh 4) phá nhịp của các cảnh game.
+5. **Kết bằng góc cận nhất** (mắt, cảnh 7), là phần thưởng cho người lướt hết.
+
+**Toàn bộ góc trong bài này là góc mới, không trùng góc nào trong `spec25.txt`.**
 
 ## Từng slide
-Mã trong `spec_viral.txt`: `V<n>T` = ô trên (toàn cảnh), `V<n>Z` = ô dưới (phóng to).
+Mã trong `spec_viral.txt`: `V<n>T` = ô trên (toàn cảnh), `V<n>Z` = ô dưới (phóng to). Mỗi cảnh 2 slide: 001 rồi 002.
 
-| Slide | Skin | Cảnh | Ô trên (toàn cảnh) | Ô dưới (phóng to) | Vai trò giữ người xem |
-|---|---|---|---|---|---|
-| 1 | 001 | 1. Kéo vĩ | Cảnh game Come@9.5: kéo vĩ giữa hạt vàng, nền đêm (A06) | Mặt nghiêng lúc kéo vĩ, cùng phía camera | **Hook:** ảnh đẹp nhất, nền tối nổi bật giữa feed sáng |
-| 2 | 002 | 1. Kéo vĩ | như trên | như trên | So sánh ngay lập tức, người xem biết bài là "so skin" và sẽ lướt tiếp |
-| 3 | 001 | 2. Sảnh | Toàn thân chính diện giữa vòm pha lê (A05) | Mặt chính diện (C21) | Nền trời sáng sau cảnh đêm, "giật mắt" |
-| 4 | 002 | 2. Sảnh | như trên | như trên | So mặt chính diện, điểm khác rõ nhất giữa 2 skin |
-| 5 | 001 | 3. Dáng | Toàn thân góc thấp, nhiều trời (A09) | Giày cao gót trên biển mây (B13) | Chi tiết nhỏ mà ảnh toàn thân không thấy rõ |
-| 6 | 002 | 3. Dáng | như trên | như trên | |
-| 7 | 001 | 4. Quay lưng | Nhân vật quay lưng, toàn thân (B17) | Gáy, tóc búi, viền sáng (B15) | **Bất ngờ giữa bài:** lần đầu thấy phía sau |
-| 8 | 002 | 4. Quay lưng | như trên | như trên | |
-| 9 | 001 | 5. Cello đêm | Cảnh game Come@12: ánh xanh ngược sáng (A07) | Tay cầm vĩ trên dây đàn | Quay lại nền tối, nhịp chậm như đoạn nhạc lặng |
-| 10 | 002 | 5. Cello đêm | như trên | như trên | |
-| 11 | 001 | 6. Giữa trời | Cảnh game Come@15: ruy băng chéo khung (A08) | Mặt giữa trời | Mở rộng không gian trước khi vào cảnh kết |
-| 12 | 002 | 6. Giữa trời | như trên | như trên | |
-| 13 | 001 | 7. Kết | Nửa người chính diện (B16 mới) | **Đôi mắt** cận nhất (A03) | **Phần thưởng:** góc gần nhất cả bài |
-| 14 | 002 | 7. Kết | như trên | như trên | Slide cuối, người xem vừa so xong và muốn bình luận chọn team |
+| Slide | Cảnh | Ô trên (toàn cảnh) | Ô dưới (phóng to) | Vai trò giữ người xem |
+|---|---|---|---|---|
+| 1–2 | 1. Giáng xuống | Camera game Come@1: nhân vật từ trời đáp xuống | Mặt, camera thấp nhìn lên (el −10) | **Hook:** chuyển động mạnh, góc hùng vĩ |
+| 3–4 | 2. Hạt vàng | Camera game Come@10: kéo vĩ giữa hạt vàng (khác giây với A06) | Bàn tay cầm vĩ, lệch phải 20° | Chi tiết tay mà ảnh toàn cảnh không thấy |
+| 5–6 | 3. Từ trên cao | Toàn thân, camera cao 20° nhìn chéo từ bên trái (az −45) | Mặt nhìn từ trên xuống (el 25): mắt to, cằm thon | **Bất ngờ:** lần đầu có góc cao |
+| 7–8 | 4. Quay lưng | Toàn thân quay lưng, chéo từ bên trái (az −30) | Lưng trên và vai, nhìn chéo từ trên (el 15) | Góc phía sau, phía đối diện với bài chính |
+| 9–10 | 5. Cello đêm | Camera game Come@13: ánh xanh ngược sáng | Mặt nghiêng nhẹ (az 15) trong ánh đêm | Nền tối, nhịp chậm lại |
+| 11–12 | 6. Ruy băng | Camera game Come@16: ruy băng giữa trời | Nửa người, camera hơi cao (el 10) | Mở rộng không gian trước khi kết |
+| 13–14 | 7. Vào sảnh | Camera game Come@20: bước vào sảnh | **Đôi mắt** cận nhất (dist 0.6, fov 25) | **Phần thưởng:** góc gần nhất, mời bình luận chọn team |
 
 Nếu muốn slide 1 là skin mạnh hơn (ví dụ 002 đẹp hơn ở cảnh kéo vĩ), đổi thứ tự skin trong `ghep_viral.py` (dòng `for sk in ("001", "002")`).
 
@@ -64,4 +62,4 @@ powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/
 ```
 - Ảnh ra: `tiktok/anh_viral/viral_01.png` … `viral_14.png` (1080×1920).
 - Ô phóng to lệch hoặc xấu: chỉnh dòng `V<n>Z` trong `spec_viral.txt` (az/el/dist/dy như `spec25.txt`) rồi chạy lại.
-- Riêng cảnh kéo vĩ, nếu lượt dò `do_goc.ps1` tìm được góc thấy rõ mặt hơn, thay số của `V1Z` bằng góc đó.
+- Các ô camera game (`V1T`, `V2T`, `V5T`, `V6T`, `V7T`) muốn đổi khoảnh khắc thì chỉ cần đổi giây (cột 3), nhớ đổi giây ở dòng `Z` cùng cảnh cho khớp.

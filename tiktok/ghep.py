@@ -39,18 +39,24 @@ def fit(path, w, h, zoom=1.0, tam=(0.5, 0.5)):
     return vang_bong(im.resize((w, h), Image.LANCZOS), 1.8, 0.8)
 
 
+def khung_o():
+    """Vi tri 2 o 9:8 (tren, duoi) trong anh ghep: [(x, y, rong, cao), ...], nam gon trong vung an toan."""
+    ch = (AT[3] - AT[1] - KHE) // 2
+    cw = round(ch * 9 / 8)
+    x = AT[0] + (AT[2] - AT[0] - cw) // 2
+    return [(x, AT[1] + k * (ch + KHE), cw, ch) for k in range(2)]
+
+
 def slide(o):
     """o: 2 anh 1080x960 (001, 002) -> 1080x1920; 2 o nam gon trong vung an toan, nen la chinh 2 anh lam mo."""
     g = Image.new("RGB", (1080, 1920))
     for k, im in enumerate(o):
         g.paste(im, (0, 960 * k))
     g = ImageEnhance.Brightness(g.filter(ImageFilter.GaussianBlur(30))).enhance(0.55)
-    ch = (AT[3] - AT[1] - KHE) // 2
-    cw = round(ch * 9 / 8)
-    x = AT[0] + (AT[2] - AT[0] - cw) // 2
-    for k, im in enumerate(o):
-        g.paste(im.resize((cw, ch), Image.LANCZOS), (x, AT[1] + k * (ch + KHE)))
-    return dong_dau(g, x + cw, AT[3])   # goc phai-duoi o duoi
+    for im, (x, y, cw, ch) in zip(o, khung_o()):
+        g.paste(im.resize((cw, ch), Image.LANCZOS), (x, y))
+    x, y, cw, ch = khung_o()[1]
+    return dong_dau(g, x + cw, y + ch)   # goc phai-duoi o duoi
 
 
 def main():

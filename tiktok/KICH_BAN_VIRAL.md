@@ -78,3 +78,14 @@ powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/
 
 **Góc chưa có trong tờ dò:** `V02Z` (mặt lúc kéo cello, Come@11) và `V08Z` (nửa người ở Come@16.5, nâng khung) là góc mới, chưa được render thử.
 Xem nhanh 2 góc này: `powershell -File do_goc.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_kiem.txt -Khung 98 -Nhanh` → `_do/to_do_1.jpg`.
+
+## Bản so sánh có chữ "MẶC ĐỊNH / TUYỆT SẮC"
+- Mỗi slide có 2 ô cùng góc máy: ô trên là skin 001 (**MẶC ĐỊNH**), ô dưới là skin 002 (**TUYỆT SẮC**). Góc ra lấy theo thứ tự kịch bản ở trên (`spec_viral.txt`).
+- Chữ to, trắng, viền đen, đặt ở góc ô ít chi tiết nhất (`nhan.py` tự chọn), để không đè lên nhân vật. Watermark howtocheckmap ở góc phải dưới.
+- Chạy:
+  ```powershell
+  powershell -File render_tiktok.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_viral.txt -Ghep ghep_ss.py -Chi98
+  ```
+  Ảnh ra: `anh_ss/01_V02T.jpg` … `20_V10Z.jpg`, đã tối ưu, đăng được ngay.
+- Muốn thêm nhiều góc để chọn: chạy `kho.ps1` (thêm `-Chi98` nếu chỉ cần slide so sánh). Kết quả ở `kho_ss/<số>_<nhóm>_<số>.jpg`, gồm 90 slide.
+- Đổi chữ hoặc cỡ chữ: sửa `NHAN` và `CO` trong `nhan.py`.

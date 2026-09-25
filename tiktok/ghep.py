@@ -1,4 +1,4 @@
-"""Ghep anh TikTok (khong chu, khong watermark), khong dat noi dung chinh vao vung giao dien TikTok che:
+"""Ghep anh TikTok (chi co watermark howtocheckmap, wm.py), khong dat noi dung chinh vao vung giao dien TikTok che:
   ghep_anhkim_NN.png      1080x1920: 2 o 9:8 (001 tren, 002 duoi) nam gon trong vung an toan;
                           ngoai vung an toan la chinh 2 anh do lam mo, toi di
   rieng_anhkim_NN_00X.png 1080x1920 tung skin; render 9:16 rong hon K (mo_fov.py) roi cat sao cho
@@ -10,6 +10,7 @@ import numpy as np
 from PIL import Image, ImageEnhance, ImageFilter
 from vang import vang_bong
 from mo_fov import K
+from wm import dong_dau
 
 GOC = os.path.dirname(os.path.abspath(__file__))
 R, OUT = os.path.join(GOC, "_render"), os.path.join(GOC, "anh")
@@ -48,7 +49,7 @@ def slide(o):
     x = AT[0] + (AT[2] - AT[0] - cw) // 2
     for k, im in enumerate(o):
         g.paste(im.resize((cw, ch), Image.LANCZOS), (x, AT[1] + k * (ch + KHE)))
-    return g
+    return dong_dau(g, x + cw, AT[3])   # goc phai-duoi o duoi
 
 
 def main():
@@ -64,7 +65,7 @@ def main():
         for sk in ("001", "002"):
             o.append(fit(f"{R}/{sk}_98/{c}.png", 1080, 960))
             r = fit(f"{R}/{sk}_916/{c}.png", 1080, 1920, K, TAM)
-            r.save(f"{OUT}/rieng_anhkim_{i:02d}_{sk}.png")
+            dong_dau(r, AT[2], AT[3]).save(f"{OUT}/rieng_anhkim_{i:02d}_{sk}.png")   # goc phai-duoi vung an toan
             m = np.asarray(r).max(2) <= 6   # nen den (troi het) chi o mep; toc/vo den o giua khong tinh
             if max(m[:40].mean(), m[-40:].mean(), m[:, :40].mean(), m[:, -40:].mean()) > 0.05: den.append(f"{c}_{sk}")
         slide(o).save(f"{OUT}/ghep_anhkim_{i:02d}.png")

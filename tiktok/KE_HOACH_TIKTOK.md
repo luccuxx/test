@@ -12,7 +12,7 @@
   - `ghep_anhkim`: 2 ô 001/002 (753×669) nằm gọn trong vùng an toàn x 60–950, y 150–1500. Phần ngoài là chính 2 ảnh đó làm mờ và tối đi.
   - `rieng_anhkim`: khung 9:16 render với fov rộng hơn 15% (`mo_fov.py`), rồi cắt sao cho tâm khung (điểm camera nhìn) rơi vào giữa vùng an toàn (505, 825).
     Góc camera game (A05–A08, fov 0) không mở rộng được nên bị cắt chặt hơn khoảng 15%, chủ yếu mất phần trời phía trên.
-- **Không chữ, không watermark trên ảnh.** Tên góc chỉ dùng trong kế hoạch; caption viết ở phần mô tả bài đăng.
+- **Trên ảnh chỉ có watermark `howtocheckmap`** (`wm.py`): chữ trắng nửa trong suốt ở góc phải dưới, nằm trong vùng an toàn. Không có chữ nào khác; tên góc chỉ dùng trong kế hoạch, caption viết ở phần mô tả bài đăng. Muốn tắt watermark thì đặt `WM = ""` trong `wm.py`.
 - Giới hạn nội dung: gợi cảm kiểu nghệ thuật (đường cong, da trần ở vai, lưng, gáy; chân, hông), nhân vật mặc nguyên trang phục gốc. Không quay từ dưới lên trong váy, không đặt tâm khung vào háng hay vùng kín. Như vậy ảnh không bị TikTok hạn chế hiển thị.
 
 ## 2. Công cụ (thư mục `D:/model_aov/GiaLa/tiktok`)
@@ -135,4 +135,4 @@ Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Gó
 - Xóa `_render/` sau khi duyệt (chỉ giữ `anh/`). Bạn tự đăng; tôi không đăng hộ.
 
 ## 8. Prompt dùng lần sau
-> Đọc `D:/model_aov/GiaLa/tiktok/KE_HOACH_TIKTOK.md`, chỉnh `spec25.txt` nếu cần, chạy `render_tiktok.ps1`, soát theo mục 1, 3, 4 và gửi ảnh cho tôi xem. Không chèn chữ hay watermark. Tự làm, không hỏi lại.
+> Đọc `D:/model_aov/GiaLa/tiktok/KE_HOACH_TIKTOK.md`, chỉnh `spec25.txt` nếu cần, chạy `render_tiktok.ps1`, soát theo mục 1, 3, 4 và gửi ảnh cho tôi xem. Chỉ giữ watermark howtocheckmap, không chèn chữ khác. Tự làm, không hỏi lại.

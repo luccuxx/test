@@ -1,4 +1,4 @@
-"""Ghep bai viral (khong chu, khong watermark): moi slide 1 skin, o tren = toan canh (ma ...T), o duoi = phong to
+"""Ghep bai viral (chi co watermark howtocheckmap o goc phai-duoi o duoi, qua ghep.slide): moi slide 1 skin, o tren = toan canh (ma ...T), o duoi = phong to
 cung khoanh khac (ma ...Z); 2 o 9:8 nam gon trong vung an toan TikTok (ghep.slide).
 Thu tu slide: canh 1 (001, 002), canh 2 (001, 002)... theo spec_viral.txt -> anh_viral/viral_NN.png.
 Render: render_tiktok.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_viral.txt -Ghep ghep_viral.py -Chi98"""

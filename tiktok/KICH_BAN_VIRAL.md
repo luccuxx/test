@@ -6,7 +6,7 @@
 - **Mỗi cảnh 2 slide liền nhau: 001 rồi 002**, cùng góc máy.
   Người xem vừa thấy 001 sẽ lướt để so với 002. Đó là lý do để lướt tiếp mà không cần chữ trên ảnh.
 - **10 cảnh = 20 slide.** Dài để TikTok tính thời gian xem cao. Nhịp đổi góc liên tục nên người xem không thấy dài (TikTok cho tối đa 35 ảnh).
-- **Không chữ, không watermark trên ảnh.** Mọi câu dẫn dắt nằm ở caption và bình luận ghim.
+- **Trên ảnh chỉ có watermark `howtocheckmap`** ở góc phải dưới ô dưới (trong vùng an toàn). Mọi câu dẫn dắt nằm ở caption và bình luận ghim.
 - Hai ô nằm gọn trong vùng an toàn (x 60–950, y 150–1500), không bị caption hay cột icon che.
 
 ## Nhịp giữ người xem

@@ -1,4 +1,4 @@
-# Render 25 goc (spec25.txt) cho 2 skin, 9:8 va 9:16, anh kim; roi ghep vao anh/ (khong chu, tranh vung TikTok che).
+# Render 25 goc (spec25.txt) cho 2 skin, 9:8 va 9:16, anh kim; roi ghep vao anh/ (watermark howtocheckmap, tranh vung TikTok che).
 # Khung 9:16 dung spec mo rong fov (mo_fov.py) de ghep.py doi tam nhan vat vao vung an toan ma khong mat bo cuc.
 # Unity Editor phai dong 2 project GiaLa/unity_00X. -Spec <file> de render lai vai dong (ghi de anh cung ten).
 # -Ghep <script> doi buoc ghep (vd ghep_viral.py); -Chi98 bo khung 9:16 (bai viral chi dung o 9:8).

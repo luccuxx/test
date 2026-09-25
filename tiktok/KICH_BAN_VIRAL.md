@@ -10,32 +10,32 @@
 - Hai ô nằm gọn trong vùng an toàn (x 60–950, y 150–1500), không bị caption hay cột icon che.
 
 ## Nhịp giữ người xem
-Thứ tự được sắp theo 5 nguyên tắc:
-1. **Mở bằng chuyển động mạnh nhất.** Khoảnh khắc nhân vật giáng xuống (Come@1) làm người xem dừng lướt.
-2. **Không có 2 cảnh liền nhau cùng kiểu góc.** Ô phóng to lần lượt: nhìn từ dưới lên → tay → từ trên xuống → vai ngang → lưng chéo → ngoảnh lại → mặt trong đêm → nửa người từ trên → mặt lúc nghỉ → mắt cận.
-   Mỗi slide mới là một cách nhìn mới, người xem không đoán được slide sau.
-3. **Theo đúng dòng thời gian của đoạn Come:** giáng xuống → hạt vàng → cello đêm → ruy băng → bước vào sảnh.
-   Người xem cảm giác đang xem một câu chuyện và muốn biết đoạn kết.
-4. **Chèn cảnh bất ngờ ở giữa bài:** góc cao (cảnh 3), vai ngang (cảnh 4), quay lưng rồi **ngoảnh lại** (cảnh 5→6: một mini-câu chuyện, người xem lướt để xem nhân vật quay lại), dáng nghỉ (cảnh 9) phá nhịp các cảnh game.
+Thứ tự đã chỉnh theo tờ dò (`to_do_1..4.jpg`), theo 5 nguyên tắc:
+1. **Mở bằng khoảnh khắc đẹp nhất, rồi mới quay về đầu câu chuyện.**
+   Slide 1 là kéo cello chính diện giữa hạt sáng xanh (Come@11). Slide 3 mới quay về cảnh giáng xuống (Come@1), cảnh có nhân vật nhỏ, không hợp làm hook.
+2. **Không có 2 cảnh liền nhau cùng kiểu góc.** Các ô phóng to lần lượt là:
+   mặt và đàn → mặt nhìn từ dưới → mặt nhìn từ trên → vai và mặt → lưng và vai → tóc búi → mặt trong đêm → nửa người → mặt lúc nghỉ → mắt cận.
+3. **Theo dòng thời gian:** giáng xuống → cello đêm → ruy băng → bước vào sảnh.
+4. **Chèn cảnh bất ngờ ở giữa bài:** góc cao, vai nghiêng, quay lưng rồi tóc búi, dáng nghỉ. Các cảnh này phá nhịp các cảnh game.
 5. **Kết bằng góc cận nhất** (mắt, cảnh 10), là phần thưởng cho người lướt hết.
 
-**Toàn bộ góc trong bài này là góc mới, không trùng góc nào trong `spec25.txt`.**
+**Toàn bộ góc là góc mới, không trùng `spec25.txt`. Các góc bị tay, vĩ hoặc đàn che và các góc nền đen đã được thay bằng biến thể sạch trong tờ dò.**
 
 ## Từng slide
-Mã trong `spec_viral.txt`: `V<n>T` = ô trên (toàn cảnh), `V<n>Z` = ô dưới (phóng to). Mỗi cảnh 2 slide: 001 rồi 002.
+Mã trong `spec_viral.txt`: `V<n>T` = ô trên (toàn cảnh), `V<n>Z` = ô dưới (phóng to). Mỗi cảnh 2 slide: 001 rồi 002. Thứ tự slide theo thứ tự dòng trong file.
 
-| Slide | Cảnh | Ô trên (toàn cảnh) | Ô dưới (phóng to) | Vai trò giữ người xem |
+| Slide | Cảnh (mã) | Ô trên (toàn cảnh) | Ô dưới (phóng to) | Vai trò giữ người xem |
 |---|---|---|---|---|
-| 1–2 | 1. Giáng xuống | Camera game Come@1: nhân vật từ trời đáp xuống | Mặt, camera thấp nhìn lên (el −10) | **Hook:** chuyển động mạnh, góc hùng vĩ |
-| 3–4 | 2. Hạt vàng | Camera game Come@10: kéo vĩ giữa hạt vàng (khác giây với A06) | Bàn tay cầm vĩ, lệch phải 20° | Chi tiết tay mà ảnh toàn cảnh không thấy |
-| 5–6 | 3. Từ trên cao | Toàn thân, camera cao 20° nhìn chéo từ bên trái (az −45) | Mặt nhìn từ trên xuống (el 25): mắt to, cằm thon | **Bất ngờ:** lần đầu có góc cao |
-| 7–8 | 4. Vai trần nghiêng | Nửa người nhìn ngang từ bên phải (az 55) | Vai và cổ nhìn ngang (az 55) | Góc ngang đầu tiên, đường vai và cổ rõ nhất |
-| 9–10 | 5. Quay lưng | Toàn thân quay lưng, chéo từ bên trái (az −30) | Lưng trên và vai, nhìn chéo từ trên (el 15) | Góc phía sau, người xem chờ nhân vật quay lại |
-| 11–12 | 6. Ngoảnh lại | Turn2@1.75 lúc đầu ngoảnh, nửa người chéo phải (az 40) | Mặt ngoảnh lại (az 40) | **Trả lời cảnh 5**, cao trào giữa bài |
-| 13–14 | 7. Cello đêm | Camera game Come@13: ánh xanh ngược sáng | Mặt nghiêng nhẹ (az 15) trong ánh đêm | Nền tối, nhịp chậm lại |
-| 15–16 | 8. Ruy băng | Camera game Come@16: ruy băng giữa trời | Nửa người, camera hơi cao (el 10) | Mở rộng không gian |
-| 17–18 | 9. Dáng nghỉ | Rest2@3 toàn thân, chéo trái từ trên (az −35, el 10) | Mặt lúc nghỉ (az −35) | Nhịp thư giãn trước cảnh kết |
-| 19–20 | 10. Vào sảnh | Camera game Come@20: bước vào sảnh | **Đôi mắt** cận nhất (dist 0.6, fov 25) | **Phần thưởng:** góc gần nhất, mời bình luận chọn team |
+| 1–2 | 1. Kéo cello (V02) | Camera game Come@11: chính diện, hạt sáng xanh | Mặt, vai và đàn | **Hook:** đẹp nhất bài |
+| 3–4 | 2. Giáng xuống (V01) | Camera game Come@1: từ trời đáp xuống | Mặt nhìn từ dưới lên, chéo phải | Quay về đầu câu chuyện |
+| 5–6 | 3. Từ trên cao (V03) | Toàn thân, camera cao nhìn chéo (az −20) | Mặt nhìn từ trên xuống | Góc cao đầu tiên |
+| 7–8 | 4. Vai nghiêng (V04) | Nửa người chéo phải (az 30) | Vai và mặt | Đường vai, cổ |
+| 9–10 | 5. Quay lưng (V05) | Toàn thân quay lưng, tay giơ | Lưng và vai | **Bất ngờ giữa bài** |
+| 11–12 | 6. Tóc búi (V06) | Quay lưng dang tay (Turn2@2.25) | Tóc búi, trâm cài | Chi tiết chỉ thấy từ phía sau |
+| 13–14 | 7. Cello đêm (V07) | Camera game Come@13: chơi cello, ánh xanh | Mặt trong ánh đêm | Nền tối, nhịp chậm |
+| 15–16 | 8. Ruy băng (V08) | Camera game Come@16.5: nửa người dang tay | Nửa người, trọn mặt | Mở rộng không gian |
+| 17–18 | 9. Dáng nghỉ (V09) | Rest2@3 toàn thân (az −10) | Mặt lúc nghỉ | Thư giãn trước cảnh kết |
+| 19–20 | 10. Vào sảnh (V10) | Camera game Come@20: ruy băng xoáy | **Đôi mắt** cận nhất | **Phần thưởng**, mời bình luận chọn team |
 
 Nếu muốn slide 1 là skin mạnh hơn (ví dụ 002 đẹp hơn ở cảnh kéo vĩ), đổi thứ tự skin trong `ghep_viral.py` (dòng `for sk in ("001", "002")`).
 
@@ -75,3 +75,6 @@ powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/
    → `_do/to_do_1.jpg` … `to_do_4.jpg`. Mỗi hàng là một góc (theo thứ tự V01T, V01Z, V02T…), 5 cột là a–e, mỗi ô có trái 001, phải 002.
 3. Chọn biến thể không bị che: `py -3.14 chon.py V04Z=c V07Z=b ...` (ghi thẳng vào `spec_viral.txt`; góc nào ổn thì không cần ghi).
 4. Render lại bài viral như mục Render ở trên.
+
+**Góc chưa có trong tờ dò:** `V02Z` (mặt lúc kéo cello, Come@11) và `V08Z` (nửa người ở Come@16.5, nâng khung) là góc mới, chưa được render thử.
+Xem nhanh 2 góc này: `powershell -File do_goc.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_kiem.txt -Khung 98 -Nhanh` → `_do/to_do_1.jpg`.

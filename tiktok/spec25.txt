@@ -8,12 +8,12 @@ A07|Come|12|-|0|0|0|0|0
 A08|Come|15|-|0|0|0|0|0
 A09|Idleshow|0|Bip001 Pelvis|20|-3|4.2|30|0
 A10|Idleshow|0|Bip001 Head|-20|5|0.85|28|0
-B11|Idleshow|0|Bip001 L Calf|25|-5|1.4|32|-0.05
-B12|Idleshow|0|Bip001 L Thigh|-40|0|1.6|30|-0.45
+B11|Idleshow|0|Bip001 Pelvis|0|8|2.4|32|-0.5
+B12|Idleshow|0|Bip001 L Calf|0|5|1.2|30|-0.25
 B13|Idleshow|0|Bip001 R Foot|10|-3|1.8|30|0.12
 B14|Idleshow|0|Bip001 Pelvis|25|5|1.3|30|0.15
 B15|Idleshow_Turn2|1.25|Bip001 Neck|15|10|0.7|30|0.05
-B16|Idleshow_Turn2|1.25|Bip001 Spine1|10|10|1.2|30|0.05
+B16|Idleshow|0|Bip001 Spine1|0|5|1.9|30|0.1
 B17|Idleshow_Turn2|1.25|Bip001 Spine|0|8|2.4|30|0.1
 B18|Idleshow_Turn2|1.25|Bip001 Spine|20|8|2.6|30|0.1
 B19|Idleshow_Turn2|1.75|Bip001 Head|15|5|0.9|30|0

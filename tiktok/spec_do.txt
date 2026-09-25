@@ -1,0 +1,15 @@
+D01|Come|9.5|Bip001 Spine|0|5|2.2|30|0.05
+D02|Come|9.5|Bip001 Spine|30|5|2.2|30|0.05
+D03|Come|9.5|Bip001 Spine|60|5|2.2|30|0.05
+D04|Come|9.5|Bip001 Spine|90|5|2.2|30|0.05
+D05|Come|9.5|Bip001 Spine|120|5|2.2|30|0.05
+D06|Come|9.5|Bip001 Spine|150|5|2.2|30|0.05
+D07|Come|9.5|Bip001 Spine|180|5|2.2|30|0.05
+D08|Come|9.5|Bip001 Spine|-150|5|2.2|30|0.05
+D09|Come|9.5|Bip001 Spine|-120|5|2.2|30|0.05
+D10|Come|9.5|Bip001 Spine|-90|5|2.2|30|0.05
+D11|Come|9.5|Bip001 Spine|-60|5|2.2|30|0.05
+D12|Come|9.5|Bip001 Spine|-30|5|2.2|30|0.05
+B11|Idleshow|0|Bip001 Pelvis|0|8|2.4|32|-0.5
+B12|Idleshow|0|Bip001 L Calf|0|5|1.2|30|-0.25
+B16|Idleshow|0|Bip001 Spine1|0|5|1.9|30|0.1

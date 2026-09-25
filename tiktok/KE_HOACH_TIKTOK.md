@@ -50,6 +50,13 @@
 ## 5. Danh sách 25 góc (mỗi góc = 2 ảnh: 001 rồi 002)
 Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Góc" ghi `xương | az | el | dist | fov | dy`; `camera game` = dùng camera của clip.
 
+**Đã đổi theo yêu cầu (số trong `spec25.txt`):**
+- B11, B12, B16 chuyển sang **chính diện** (Idleshow@0, az 0, camera hơi cao hơn điểm nhìn):
+  - B11: toàn bộ đôi chân, từ eo tới gót.
+  - B12: từ gối xuống gót (không lấy vùng háng).
+  - B16: nửa người từ hông lên.
+- A06 giữ nguyên. Sẽ thêm vài slide cùng khoảnh khắc Come@9.5 ở góc khác, chèn ngay sau A06, chọn từ lượt dò `spec_do.txt`.
+
 ### Bài A: "Cùng một góc: 001 và 002" (ảnh 1–20)
 | Góc | Ảnh | Nhóm | Pose | Góc | Ý đồ nghệ thuật / tên góc |
 |---|---|---|---|---|---|
@@ -114,6 +121,11 @@ Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Gó
 - Chỉ render lại vài góc: chép các dòng đó vào `spec_sua.txt` (số phải giống hệt `spec25.txt`), chạy
   `powershell -File D:/model_aov/GiaLa/tiktok/render_tiktok.ps1 -Spec D:/model_aov/GiaLa/tiktok/spec_sua.txt`
   (cần `_render/` của lần render đủ 25 góc; ảnh cùng tên bị ghi đè rồi ghép lại cả 25 slide).
+- Dò góc mới trước khi đưa vào `spec25.txt`: ghi các góc thử vào `spec_do.txt`, rồi chạy
+  `powershell -File D:/model_aov/GiaLa/tiktok/do_goc.ps1`.
+  - Lệnh chỉ render khung 9:8 vào `_do/`, không đụng tới `_render/` và `anh/`.
+  - Kết quả là `_do/to_do.jpg`, ảnh ghép không chữ: mỗi ô là một dòng spec (trái 001, phải 002), 3 ô mỗi hàng, đúng thứ tự dòng.
+    Màn hình in ra mã của từng ô và ô nào bị nền đen.
 - Soát `anh/`: không nền đen, chủ thể trong vùng an toàn, đúng giới hạn nội dung mục 1, hai skin cùng khung, vật thể nền
   không che nhân vật. Ảnh lệch thì chỉnh az/el/dist/dy hoặc thay bằng góc dự phòng rồi chạy lại.
 - Xóa `_render/` sau khi duyệt (chỉ giữ `anh/`). Bạn tự đăng; tôi không đăng hộ.

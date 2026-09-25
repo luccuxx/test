@@ -136,3 +136,9 @@ Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Gó
 
 ## 8. Prompt dùng lần sau
 > Đọc `D:/model_aov/GiaLa/tiktok/KE_HOACH_TIKTOK.md`, chỉnh `spec25.txt` nếu cần, chạy `render_tiktok.ps1`, soát theo mục 1, 3, 4 và gửi ảnh cho tôi xem. Chỉ giữ watermark howtocheckmap, không chèn chữ khác. Tự làm, không hỏi lại.
+
+## 9. Kho ảnh nhiều góc (tự chọn ảnh)
+- Chạy `powershell -File D:/model_aov/GiaLa/tiktok/kho.ps1`: tạo `spec_kho.txt` (90 góc, `tao_kho.py`), render 9:16 cho 2 skin, rồi xuất `kho/<nhóm>_<số>_<skin>.jpg`.
+  Ảnh xuất ra đã đủ bước để đăng: đưa tâm vào vùng an toàn, ánh vàng kim, watermark, chống vỡ.
+- Nhóm: MAT (chân dung), VAI, NUA (nửa người), TOAN (toàn thân), GAME (camera game đoạn Come), CMAT / CNUA (mặt / nửa người trong Come), LUNG (quay lưng), TOC (tóc búi), NGHI (dáng nghỉ).
+- Ảnh nền đen tự chuyển vào `kho/_nen_den/`. Muốn đổi danh sách góc thì sửa `tao_kho.py`, xoá `spec_kho.txt`, rồi chạy lại.

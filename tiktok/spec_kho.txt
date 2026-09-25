@@ -1,0 +1,90 @@
+MAT_01|Idleshow|0|Bip001 Head|-20|0|0.75|28|0
+MAT_02|Idleshow|0|Bip001 Head|-20|15|0.75|28|0
+MAT_03|Idleshow|0|Bip001 Head|0|0|0.75|28|0
+MAT_04|Idleshow|0|Bip001 Head|0|15|0.75|28|0
+MAT_05|Idleshow|0|Bip001 Head|20|0|0.75|28|0
+MAT_06|Idleshow|0|Bip001 Head|20|15|0.75|28|0
+MAT_07|Idleshow|0|Bip001 Head|35|0|0.75|28|0
+MAT_08|Idleshow|0|Bip001 Head|35|15|0.75|28|0
+MAT_09|Idleshow|0|Bip001 Head|0|5|0.45|25|0.03
+MAT_10|Idleshow|0|Bip001 Head|20|5|0.45|25|0.03
+VAI_01|Idleshow|0|Bip001 Neck|-15|5|1|30|-0.05
+VAI_02|Idleshow|0|Bip001 Neck|15|5|1|30|-0.05
+VAI_03|Idleshow|0|Bip001 Neck|30|5|1|30|-0.05
+NUA_01|Idleshow|0|Bip001 Spine|-20|5|2.2|30|0.1
+NUA_02|Idleshow|0|Bip001 Spine|-20|20|2.2|30|0.1
+NUA_03|Idleshow|0|Bip001 Spine|0|5|2.2|30|0.1
+NUA_04|Idleshow|0|Bip001 Spine|0|20|2.2|30|0.1
+NUA_05|Idleshow|0|Bip001 Spine|20|5|2.2|30|0.1
+NUA_06|Idleshow|0|Bip001 Spine|20|20|2.2|30|0.1
+NUA_07|Idleshow|0|Bip001 Spine|35|5|2.2|30|0.1
+NUA_08|Idleshow|0|Bip001 Spine|35|20|2.2|30|0.1
+TOAN_01|Idleshow|0|Bip001 Pelvis|-20|-5|4.3|30|0
+TOAN_02|Idleshow|0|Bip001 Pelvis|-20|10|4.3|30|0
+TOAN_03|Idleshow|0|Bip001 Pelvis|-20|25|4.3|30|0
+TOAN_04|Idleshow|0|Bip001 Pelvis|0|-5|4.3|30|0
+TOAN_05|Idleshow|0|Bip001 Pelvis|0|10|4.3|30|0
+TOAN_06|Idleshow|0|Bip001 Pelvis|0|25|4.3|30|0
+TOAN_07|Idleshow|0|Bip001 Pelvis|20|-5|4.3|30|0
+TOAN_08|Idleshow|0|Bip001 Pelvis|20|10|4.3|30|0
+TOAN_09|Idleshow|0|Bip001 Pelvis|20|25|4.3|30|0
+GAME_01|Come|1|-|0|0|0|0|0
+GAME_02|Come|2|-|0|0|0|0|0
+GAME_03|Come|9|-|0|0|0|0|0
+GAME_04|Come|9.5|-|0|0|0|0|0
+GAME_05|Come|10|-|0|0|0|0|0
+GAME_06|Come|10.5|-|0|0|0|0|0
+GAME_07|Come|11|-|0|0|0|0|0
+GAME_08|Come|11.5|-|0|0|0|0|0
+GAME_09|Come|12|-|0|0|0|0|0
+GAME_10|Come|12.5|-|0|0|0|0|0
+GAME_11|Come|13|-|0|0|0|0|0
+GAME_12|Come|13.5|-|0|0|0|0|0
+GAME_13|Come|14.5|-|0|0|0|0|0
+GAME_14|Come|15|-|0|0|0|0|0
+GAME_15|Come|15.5|-|0|0|0|0|0
+GAME_16|Come|16|-|0|0|0|0|0
+GAME_17|Come|16.5|-|0|0|0|0|0
+GAME_18|Come|17|-|0|0|0|0|0
+GAME_19|Come|19.5|-|0|0|0|0|0
+GAME_20|Come|20|-|0|0|0|0|0
+GAME_21|Come|20.5|-|0|0|0|0|0
+GAME_22|Come|21|-|0|0|0|0|0
+CMAT_01|Come|11|Bip001 Head|-20|0|0.8|28|0
+CMAT_02|Come|11|Bip001 Head|-20|10|0.8|28|0
+CMAT_03|Come|11|Bip001 Head|0|0|0.8|28|0
+CMAT_04|Come|11|Bip001 Head|0|10|0.8|28|0
+CMAT_05|Come|11|Bip001 Head|20|0|0.8|28|0
+CMAT_06|Come|11|Bip001 Head|20|10|0.8|28|0
+CMAT_07|Come|13|Bip001 Head|-20|0|0.8|28|0
+CMAT_08|Come|13|Bip001 Head|-20|10|0.8|28|0
+CMAT_09|Come|13|Bip001 Head|0|0|0.8|28|0
+CMAT_10|Come|13|Bip001 Head|0|10|0.8|28|0
+CMAT_11|Come|13|Bip001 Head|20|0|0.8|28|0
+CMAT_12|Come|13|Bip001 Head|20|10|0.8|28|0
+CMAT_13|Come|20|Bip001 Head|-20|0|0.8|28|0
+CMAT_14|Come|20|Bip001 Head|-20|10|0.8|28|0
+CMAT_15|Come|20|Bip001 Head|0|0|0.8|28|0
+CMAT_16|Come|20|Bip001 Head|0|10|0.8|28|0
+CMAT_17|Come|20|Bip001 Head|20|0|0.8|28|0
+CMAT_18|Come|20|Bip001 Head|20|10|0.8|28|0
+CNUA_01|Come|11|Bip001 Spine1|-15|10|1.4|30|0.2
+CNUA_02|Come|11|Bip001 Spine1|15|10|1.4|30|0.2
+CNUA_03|Come|16.5|Bip001 Spine1|-15|10|1.4|30|0.2
+CNUA_04|Come|16.5|Bip001 Spine1|15|10|1.4|30|0.2
+LUNG_01|Idleshow_Turn2|1.25|Bip001 Spine|-30|5|2.6|30|0.1
+LUNG_02|Idleshow_Turn2|1.25|Bip001 Spine|0|5|2.6|30|0.1
+LUNG_03|Idleshow_Turn2|1.25|Bip001 Spine|30|5|2.6|30|0.1
+LUNG_04|Idleshow_Turn2|1.75|Bip001 Spine|-30|5|2.6|30|0.1
+LUNG_05|Idleshow_Turn2|1.75|Bip001 Spine|0|5|2.6|30|0.1
+LUNG_06|Idleshow_Turn2|1.75|Bip001 Spine|30|5|2.6|30|0.1
+LUNG_07|Idleshow_Turn2|2.25|Bip001 Spine|-30|5|2.6|30|0.1
+LUNG_08|Idleshow_Turn2|2.25|Bip001 Spine|0|5|2.6|30|0.1
+LUNG_09|Idleshow_Turn2|2.25|Bip001 Spine|30|5|2.6|30|0.1
+TOC_01|Idleshow_Turn2|1.75|Bip001 Head|0|0|0.7|28|0
+TOC_02|Idleshow_Turn2|1.75|Bip001 Head|15|0|0.7|28|0
+TOC_03|Idleshow_Turn2|1.75|Bip001 Head|30|0|0.7|28|0
+NGHI_01|Idleshow_Rest2|3|Bip001 Pelvis|-10|10|4.2|30|0
+NGHI_02|Idleshow_Rest2|3|Bip001 Head|-10|5|0.8|28|0
+NGHI_03|Idleshow_Rest2|3|Bip001 Pelvis|10|10|4.2|30|0
+NGHI_04|Idleshow_Rest2|3|Bip001 Head|10|5|0.8|28|0

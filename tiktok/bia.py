@@ -12,6 +12,7 @@ from xuat_tiktok import toi_uu, SRGB
 
 TIEU_DE = "CHỌN TEAM NÀO?"
 CUOI = "XEM HẾT RỒI CHỌN NHÉ!"
+LUOI = 250          # luoi trang ca nhan TikTok chi hien 3:4 giua anh (y 240-1680): tieu de phai nam duoi muc nay
 VANG, TRANG, DEN = (255, 214, 64), (255, 255, 255), (0, 0, 0)
 
 
@@ -36,7 +37,7 @@ def main(ma, nguon, ra):
         g.paste(im, (0, 960 * k))
     g = ImageEnhance.Brightness(g.filter(ImageFilter.GaussianBlur(30))).enhance(0.45)
     d = ImageDraw.Draw(g)
-    tren = chu_giua(d, AT[1] + 12, TIEU_DE, 92, VANG, 8) + 26            # tieu de
+    tren = chu_giua(d, LUOI + 12, TIEU_DE, 92, VANG, 8) + 26               # tieu de (trong o luoi trang ca nhan)
     duoi = AT[3] - 12 - 70                                               # cho dong cuoi
     khe = 40
     ch = (duoi - 20 - tren - khe) // 2

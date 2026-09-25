@@ -1,7 +1,7 @@
 # Render 25 goc (spec25.txt) cho 2 skin, 9:8 va 9:16, anh kim; roi ghep vao anh/ (watermark howtocheckmap, tranh vung TikTok che).
 # Khung 9:16 dung spec mo rong fov (mo_fov.py) de ghep.py doi tam nhan vat vao vung an toan ma khong mat bo cuc.
 # Unity Editor phai dong 2 project GiaLa/unity_00X. -Spec <file> de render lai vai dong (ghi de anh cung ten).
-# -Ghep <script> doi buoc ghep (vd ghep_viral.py); -Chi98 bo khung 9:16 (bai viral chi dung o 9:8).
+# -Ghep "<script> [tham so]" doi buoc ghep (vd ghep_viral.py, "ghep_ss.py spec_viral.txt _render bai_dang"); -Chi98 bo khung 9:16 (bai viral chi dung o 9:8).
 param([string]$Spec = "D:/model_aov/GiaLa/tiktok/spec25.txt", [string]$Ghep = "ghep.py", [switch]$Chi98)
 $G = "D:/model_aov/GiaLa"
 $unity = "C:\Program Files\Unity\Hub\Editor\6000.3.24f1\Editor\Unity.exe"
@@ -21,4 +21,5 @@ foreach ($sk in "001", "002") {
         Select-String -Path "$G/unity_$sk/Logs/tiktok.log" -Pattern "error CS|\[GameKit\] thieu|Exception|OutOfMemory" | ForEach-Object { $_.Line }
     }
 }
-py -3.14 "$PSScriptRoot/$Ghep"
+$g = -split $Ghep   # "script [tham so...]"
+if ($g.Count -gt 1) { py -3.14 "$PSScriptRoot/$($g[0])" $g[1..($g.Count - 1)] } else { py -3.14 "$PSScriptRoot/$($g[0])" }

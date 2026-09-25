@@ -5,7 +5,7 @@ from PIL import ImageDraw
 from wm import _font
 
 NHAN = {"001": "MẶC ĐỊNH", "002": "TUYỆT SẮC"}
-CO, VIEN, LE = 64, 6, 22    # co chu, do day vien den, cach mep o (px tren khung 1080x1920)
+CO, VIEN, LE = 51, 5, 22    # co chu, do day vien den, cach mep o (px tren khung 1080x1920)
 
 
 def _nang_luong(g, box):

@@ -8,7 +8,7 @@ from PIL import Image
 
 GOC = os.path.dirname(os.path.abspath(__file__))
 D = os.path.join(GOC, "_do")
-W, H, GAP, COT = 360, 320, 24, 3
+W, H, GAP, COT = 270, 480, 24, 3   # o 9:16
 
 
 def main(spec):

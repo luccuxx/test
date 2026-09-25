@@ -123,7 +123,7 @@ Cột "Pose" ghi `clip@giây`. `(dò)` = giây chọn ở bước B1. Cột "Gó
   (cần `_render/` của lần render đủ 25 góc; ảnh cùng tên bị ghi đè rồi ghép lại cả 25 slide).
 - Dò góc mới trước khi đưa vào `spec25.txt`: ghi các góc thử vào `spec_do.txt`, rồi chạy
   `powershell -File D:/model_aov/GiaLa/tiktok/do_goc.ps1`.
-  - Lệnh chỉ render khung 9:8 vào `_do/`, không đụng tới `_render/` và `anh/`.
+  - Lệnh chỉ render khung 9:16 (1440×2560) vào `_do/`, không đụng tới `_render/` và `anh/`.
   - Kết quả là `_do/to_do.jpg`, ảnh ghép không chữ: mỗi ô là một dòng spec (trái 001, phải 002), 3 ô mỗi hàng, đúng thứ tự dòng.
     Màn hình in ra mã của từng ô và ô nào bị nền đen.
 - Soát `anh/`: không nền đen, chủ thể trong vùng an toàn, đúng giới hạn nội dung mục 1, hai skin cùng khung, vật thể nền

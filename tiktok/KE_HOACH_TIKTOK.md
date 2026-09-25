@@ -8,6 +8,10 @@
 - Vùng an toàn của TikTok (giao diện che mép khung):
   - Chữ: x 60–960, y 150–1500.
   - Không đặt mặt hay điểm nhấn ở 420 px dưới cùng (caption, nút) hoặc 130 px mép phải (cột icon).
+- **Tránh vùng TikTok che (tự động trong `ghep.py`):**
+  - `ghep_anhkim`: 2 ô 001/002 (753×669) nằm gọn trong vùng an toàn x 60–950, y 150–1500. Phần ngoài là chính 2 ảnh đó làm mờ và tối đi.
+  - `rieng_anhkim`: khung 9:16 render với fov rộng hơn 15% (`mo_fov.py`), rồi cắt sao cho tâm khung (điểm camera nhìn) rơi vào giữa vùng an toàn (505, 825).
+    Góc camera game (A05–A08, fov 0) không mở rộng được nên bị cắt chặt hơn khoảng 15%, chủ yếu mất phần trời phía trên.
 - **Không chữ, không watermark trên ảnh.** Tên góc chỉ dùng trong kế hoạch; caption viết ở phần mô tả bài đăng.
 - Giới hạn nội dung: gợi cảm kiểu nghệ thuật (đường cong, da trần ở vai, lưng, gáy; chân, hông), nhân vật mặc nguyên trang phục gốc. Không quay từ dưới lên trong váy, không đặt tâm khung vào háng hay vùng kín. Như vậy ảnh không bị TikTok hạn chế hiển thị.
 

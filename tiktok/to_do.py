@@ -5,6 +5,8 @@ import os
 import sys
 import numpy as np
 from PIL import Image
+from ghep import fit, TAM
+from mo_fov import K
 
 GOC = os.path.dirname(os.path.abspath(__file__))
 D = os.path.join(GOC, "_do")
@@ -23,7 +25,7 @@ def main(spec):
             if not os.path.exists(p):
                 ghi.append(f"{sk} thieu")
                 continue
-            im = Image.open(p).convert("RGB")
+            im = fit(p, 1080, 1920, K, TAM)   # giong het anh rieng cuoi cung
             m = np.asarray(im).max(2) <= 6   # nen den chi tinh o mep (toc/vo den o giua khong tinh)
             if max(m[:40].mean(), m[-40:].mean(), m[:, :40].mean(), m[:, -40:].mean()) > 0.05:
                 ghi.append(f"{sk} nen den")

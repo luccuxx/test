@@ -73,6 +73,22 @@ def chu_thich_khong_loc(ax):
     return [H_TIN_HIEU, H_NHIEU]
 
 
+def chu_thich_dong_khong_loc(ax):
+    for y in (Bt, -Bt):
+        ax.axhline(y, color=INK, ls=":", lw=1, zorder=3)
+    ax.text(.48, Bt + .02, r"$+B_t = B_1|v_1|$", ha="right", **NHAN)
+    ax.text(.48, -Bt - .06, r"$-B_t$", ha="right", **NHAN)
+    ax.plot([-B1, -B1], [0, Bt], color=INK, ls=":", lw=1, zorder=3)
+    ax.plot([B1, B1], [0, -Bt], color=INK, ls=":", lw=1, zorder=3)
+    ax.text(-B1, -.06, r"$-B_1$", ha="center", **NHAN)
+    ax.text(B1, .035, r"$+B_1$", ha="center", **NHAN)
+    ax.annotate("Tín hiệu nằm trên đường\n$F_t = -v_1 F_1$",
+                xy=(-.18, .18), xytext=(.03, .17), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
+    ax.text(-.48, .43, r"Ngoài khoảng $\pm B_t$: chỉ có nhiễu", **NHAN)
+    ax.text(-.48, -.44, "Chưa lọc: nhiễu trải khắp, chồng lên tín hiệu", color=MUTED, **NHAN)
+    return [H_TIN_HIEU, H_NHIEU]
+
+
 def chu_thich_tinh(ax):
     ax.text(-.48, Fc + .02, rf"$|F_t| \leq F_c \approx {Fc:.3f}$", color=BLUE, **NHAN)
     for x, s in ((-B1, r"$-B_1$"), (B1, r"$+B_1$")):
@@ -107,6 +123,8 @@ def chu_thich_alpha1(ax):
 
 ve_hinh("hinh0_vung_tinh_khong_loc", "Vùng tĩnh (v = 0), chưa qua bộ lọc", None, 0,
         chu_thich_khong_loc)
+ve_hinh("hinh0b_vung_dong_khong_loc", f"Vùng chuyển động (v₁ = {v1:g} px/khung), chưa qua bộ lọc",
+        None, v1, chu_thich_dong_khong_loc)
 ve_hinh("hinh1_vung_tinh", "Vùng tĩnh (v = 0), bộ lọc α = 1/4", Fc, 0, chu_thich_tinh)
 ve_hinh("hinh2_vung_dong_loc_manh", f"Vùng chuyển động (v₁ = {v1:g} px/khung), vẫn α = 1/4",
         Fc, v1, chu_thich_dong)

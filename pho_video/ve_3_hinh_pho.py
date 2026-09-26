@@ -24,15 +24,19 @@ H_GIU = Line2D([], [], color=INK, lw=4, label="Phổ tín hiệu được giữ 
 H_CAT = Line2D([], [], color=RED, lw=4, ls=(0, (3, 1.5)), label="Phổ tín hiệu bị cắt")
 H_DAI = Patch(color=BLUE, alpha=.35, label="Dải thông bộ lọc")
 H_NHIEU = Line2D([], [], color=NOISE, marker="o", ls="", ms=5, label="Nhiễu (trải khắp)")
+H_TIN_HIEU = Line2D([], [], color=INK, lw=4, label="Phổ tín hiệu (cảnh vật)")
 
 
 def ve_hinh(ten_file, tieu_de, dai, v, chu_thich):
     fig, ax = plt.subplots(figsize=(6.6, 7.4))
     ax.scatter(nhieu[:, 0], nhieu[:, 1], s=9, color=NOISE, lw=0, zorder=1)
-    ax.add_patch(Rectangle((-.5, -dai), 1, 2 * dai, color=BLUE, alpha=.35, lw=0, zorder=2))
-    if dai < .5:
-        for y in (dai, -dai):
-            ax.axhline(y, color=BLUE, ls="--", lw=1.2, zorder=2)
+    if dai is None:          # không dùng bộ lọc: không vẽ dải thông, giữ toàn bộ tín hiệu
+        dai = .5
+    else:
+        ax.add_patch(Rectangle((-.5, -dai), 1, 2 * dai, color=BLUE, alpha=.35, lw=0, zorder=2))
+        if dai < .5:
+            for y in (dai, -dai):
+                ax.axhline(y, color=BLUE, ls="--", lw=1.2, zorder=2)
     ax.axhline(0, color="#8a8984", lw=.8, zorder=2)
     ax.axvline(0, color="#8a8984", lw=.8, zorder=2)
 
@@ -57,6 +61,16 @@ def ve_hinh(ten_file, tieu_de, dai, v, chu_thich):
     fig.savefig(ten_file + ".png", dpi=220)
     fig.savefig(ten_file + ".svg")
     plt.close(fig)
+
+
+def chu_thich_khong_loc(ax):
+    for x, s in ((-B1, r"$-B_1$"), (B1, r"$+B_1$")):
+        ax.text(x, -.07, s, ha="center", **NHAN)
+    ax.annotate("Tín hiệu vùng tĩnh nằm trọn\ntrên đường $F_t = 0$ ($B_t = 0$)",
+                xy=(.25, 0), xytext=(-.02, .2), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
+    ax.text(-.48, .43, "Mọi điểm có $F_t \\neq 0$ đều là nhiễu", **NHAN)
+    ax.text(-.48, -.44, "Chưa lọc: nhiễu trải khắp, chồng lên tín hiệu", color=MUTED, **NHAN)
+    return [H_TIN_HIEU, H_NHIEU]
 
 
 def chu_thich_tinh(ax):
@@ -91,6 +105,8 @@ def chu_thich_alpha1(ax):
     return [H_GIU, H_DAI, H_NHIEU]
 
 
+ve_hinh("hinh0_vung_tinh_khong_loc", "Vùng tĩnh (v = 0), chưa qua bộ lọc", None, 0,
+        chu_thich_khong_loc)
 ve_hinh("hinh1_vung_tinh", "Vùng tĩnh (v = 0), bộ lọc α = 1/4", Fc, 0, chu_thich_tinh)
 ve_hinh("hinh2_vung_dong_loc_manh", f"Vùng chuyển động (v₁ = {v1:g} px/khung), vẫn α = 1/4",
         Fc, v1, chu_thich_dong)

@@ -66,7 +66,7 @@ def ve_hinh(ten_file, tieu_de, dai, v, chu_thich):
 def chu_thich_khong_loc(ax):
     for x, s in ((-B1, r"$-B_1$"), (B1, r"$+B_1$")):
         ax.text(x, -.07, s, ha="center", **NHAN)
-    ax.annotate("Tín hiệu vùng tĩnh nằm trọn\ntrên đường $F_t = 0$ ($B_t = 0$)",
+    ax.annotate("Tín hiệu vùng tĩnh nằm trọn\ntrên đường $F_t = 0$",
                 xy=(.25, 0), xytext=(-.02, .2), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
     ax.text(-.48, .43, "Mọi điểm có $F_t \\neq 0$ đều là nhiễu", **NHAN)
     ax.text(-.48, -.44, "Chưa lọc: nhiễu trải khắp, chồng lên tín hiệu", color=MUTED, **NHAN)

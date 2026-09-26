@@ -93,8 +93,8 @@ def chu_thich_tinh(ax):
     ax.text(-.48, Fc + .02, rf"$|F_t| \leq F_c \approx {Fc:.3f}$", color=BLUE, **NHAN)
     for x, s in ((-B1, r"$-B_1$"), (B1, r"$+B_1$")):
         ax.text(x, -Fc - .07, s, ha="center", **NHAN)
-    ax.annotate("Chi tiết mảnh, biên (F₁ lớn)\nvẫn nằm trong dải thông\n→ biên KHÔNG bị mờ",
-                xy=(.3, 0), xytext=(-.02, .24), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
+    ax.annotate(r"Biên đứng yên: $F_1$ lớn nhưng $F_t = 0$" "\n→ vẫn nằm trong dải thông\n→ biên KHÔNG bị mờ",
+                xy=(.3, 0), xytext=(-.17, .24), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
     ax.text(-.48, -.44, "Nhiễu nằm ngoài dải xanh → bị loại bỏ", color=MUTED, **NHAN)
     return [H_GIU, H_DAI, H_NHIEU]
 
@@ -104,8 +104,8 @@ def chu_thich_dong(ax):
         ax.axhline(y, color=INK, ls=":", lw=1, zorder=3)
     ax.text(.48, Bt + .02, r"$+B_t = B_1|v_1|$", ha="right", **NHAN)
     ax.text(-.48, -Bt - .06, r"$-B_t$", **NHAN)
-    ax.annotate("Phần phổ bị cắt\n→ ghosting, nhòe",
-                xy=(-.2, .2), xytext=(.02, .2), color=RED,
+    ax.annotate(r"Biên đang di chuyển: $|F_1|$ lớn" "\n" r"→ $|F_t|$ lớn → bị cắt" "\n→ nhòe, ghosting",
+                xy=(-.2, .2), xytext=(.0, .17), color=RED,
                 arrowprops=dict(arrowstyle="->", color=RED, lw=1.2), **NHAN)
     ax.annotate(r"Chỉ phần gần gốc lọt qua", xy=(.02, -.015), xytext=(.1, .085),
                 arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)

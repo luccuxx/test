@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Cùng một bộ lọc đệ quy α = 1/4, cùng một vật (khối sáng rộng 20 px), chỉ khác vận tốc.
+# Cùng một bộ lọc đệ quy γ = 3/4 (alpha = 1 − γ = 1/4), cùng một vật (khối sáng rộng 20 px), chỉ khác vận tốc.
 # Bản chất: ngõ ra = chồng chập các vị trí quá khứ của vật, trọng số giảm dần.
 #   Vật chậm  -> các bản sao chồng lên nhau -> biên nhòe (motion blur)
 #   Vật nhanh -> các bản sao tách rời nhau  -> bóng ma (ghosting)

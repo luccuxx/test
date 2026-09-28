@@ -6,7 +6,7 @@ from matplotlib.patches import Patch, Rectangle
 # ---- Tham số ----
 B1    = 0.35   # băng thông không gian (chu kỳ/pixel), giới hạn |F1| <= B1
 v1    = 1.0    # vận tốc vùng chuyển động (pixel/khung)
-alpha = 1/4    # hệ số bộ lọc đệ quy ở vùng tĩnh
+alpha = 1/4    # phần lấy từ khung hiện tại = 1 − γ (γ = 3/4: trọng số khung đã lọc trước, như Tekalp 6.18)
 HIEN_TIEU_DE = True   # đặt False nếu dùng caption của Word thay cho tiêu đề trong ảnh
 
 # Tần số cắt -3 dB của bộ lọc đệ quy H(z) = alpha / (1 - (1-alpha) z^-1)
@@ -114,7 +114,7 @@ def chu_thich_dong(ax):
 
 
 def chu_thich_alpha1(ax):
-    ax.text(-.48, .43, "Dải thông mở toàn miền (α = 1)", **NHAN)
+    ax.text(-.48, .43, "Dải thông mở toàn miền (γ = 0)", **NHAN)
     ax.annotate("Toàn bộ phổ tín hiệu lọt qua\n→ không ghosting",
                 xy=(-.22, .22), xytext=(-.02, .26), arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
     ax.text(-.48, -.44, "Nhiễu cũng lọt qua → vùng động vẫn còn nhiễu", color=MUTED, **NHAN)
@@ -125,9 +125,9 @@ ve_hinh("hinh0_vung_tinh_khong_loc", "Vùng tĩnh (v = 0), chưa qua bộ lọc"
         chu_thich_khong_loc)
 ve_hinh("hinh0b_vung_dong_khong_loc", f"Vùng chuyển động (v₁ = {v1:g} px/khung), chưa qua bộ lọc",
         None, v1, chu_thich_dong_khong_loc)
-ve_hinh("hinh1_vung_tinh", "Vùng tĩnh (v = 0), bộ lọc α = 1/4", Fc, 0, chu_thich_tinh)
-ve_hinh("hinh2_vung_dong_loc_manh", f"Vùng chuyển động (v₁ = {v1:g} px/khung), vẫn α = 1/4",
+ve_hinh("hinh1_vung_tinh", "Vùng tĩnh (v = 0), bộ lọc γ = 3/4", Fc, 0, chu_thich_tinh)
+ve_hinh("hinh2_vung_dong_loc_manh", f"Vùng chuyển động (v₁ = {v1:g} px/khung), vẫn γ = 3/4",
         Fc, v1, chu_thich_dong)
-ve_hinh("hinh3_vung_dong_alpha1", "Vùng chuyển động, bộ phát hiện đặt α = 1",
+ve_hinh("hinh3_vung_dong_alpha1", "Vùng chuyển động, bộ phát hiện đặt γ = 0",
         .5, v1, chu_thich_alpha1)
 print(f"Fc = {Fc:.4f} chu kỳ/khung, Bt = {Bt:.2f} chu kỳ/khung")

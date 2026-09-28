@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 
 # Mô phỏng 1 hàng ảnh: "xe" là khối sáng chạy sang phải trên nền tối (không thêm nhiễu cho dễ nhìn)
 W, NEN, XE, RONG = 240, 50.0, 200.0, 30   # số pixel, độ sáng nền, độ sáng xe, bề rộng xe
-v, alpha, T, SO_KHUNG = 4, 1/4, 20, 35    # px/khung, hệ số lọc, ngưỡng phát hiện, số khung
+v, SO_KHUNG = 4, 35                        # px/khung, số khung
+GAMMA_MAX, A = 1/2, 1/40                   # Tekalp (6.19): γ = max{0, 1/2 − α·|g[k] − g[k−1]|}, ngưỡng T = 1/(2α) = 20
 
 INK, ORANGE, BLUE, MUTED = "#0b0b0b", "#eb6834", "#2a78d6", "#52514e"
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 13})
@@ -16,25 +17,25 @@ def khung(t):
     return x
 
 
-y_thuong = khung(0)       # bộ lọc đệ quy α cố định
-y_thich_ung = khung(0)    # bộ lọc thích ứng chuyển động: |d| > T thì α = 1
+# Cả hai bộ lọc đều theo (6.18): ŝ[k] = (1−γ)·g[k] + γ·ŝ[k−1]
+y_thuong = khung(0)       # γ cố định = GAMMA_MAX (không thích ứng)
+y_thich_ung = khung(0)    # γ tính theo (6.19) từ độ chênh lệch hai khung gốc liên tiếp
 for t in range(1, SO_KHUNG):
-    x = khung(t)
-    y_thuong = y_thuong + alpha * (x - y_thuong)
-    d = np.abs(x - y_thich_ung)
-    a = np.where(d > T, 1.0, alpha)
-    y_thich_ung = y_thich_ung + a * (x - y_thich_ung)
+    x, x_truoc = khung(t), khung(t - 1)
+    y_thuong = (1 - GAMMA_MAX) * x + GAMMA_MAX * y_thuong
+    gamma = np.maximum(0, GAMMA_MAX - A * np.abs(x - x_truoc))
+    y_thich_ung = (1 - gamma) * x + gamma * y_thich_ung
 
 px = np.arange(W)
 dau = 10 + v * (SO_KHUNG - 1)            # mép sau của xe ở khung cuối
 fig, ax = plt.subplots(figsize=(10, 6.2))
 ax.plot(px, y_thich_ung, color=BLUE, lw=5, alpha=.55, drawstyle="steps-mid",
-        label="Lọc thích ứng chuyển động (|d| > T → α = 1)")
+        label="Lọc thích ứng chuyển động, γ theo (6.19)")
 ax.plot(px, x, color=INK, lw=1.6, drawstyle="steps-mid", label="Khung vào (vị trí thật của xe)")
-ax.plot(px, y_thuong, color=ORANGE, lw=2.4, label=f"Lọc thông thấp α = 1/{round(1/alpha)} cố định")
+ax.plot(px, y_thuong, color=ORANGE, lw=2.4, label="Lọc thông thấp γ = 1/2 cố định")
 
 ax.annotate("Đuôi bóng ma phía sau xe\n(vị trí cũ của xe vẫn còn trong bộ nhớ)",
-            xy=(dau - 16, y_thuong[dau - 16]), xytext=(12, 150),
+            xy=(dau - 7, y_thuong[dau - 7]), xytext=(12, 150),
             arrowprops=dict(arrowstyle="->", lw=1.2), **NHAN)
 ax.annotate("Xe bị mờ, trong suốt\n(không đạt độ sáng thật)",
             xy=(dau + 22, y_thuong[dau + 22]), xytext=(W - 2, 178), ha="right",
